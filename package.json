@@ -1,0 +1,16 @@
+{
+  "name": "apidoc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "apidoc": "^0.23.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "apidoc -i myapp/ -o CrkApiDoc/"
+  },
+  "author": "",
+  "license": "ISC"
+}
