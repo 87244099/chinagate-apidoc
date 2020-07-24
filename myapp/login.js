@@ -71,6 +71,8 @@
  * @apiName getMemberInfo
  * @apiGroup 登录注册
  * @apiDescription 获取平台会员信息
+ * 
+ * @apiParam {String} cmd getMemberInfo
  *
  * @apiSuccess {Boolean} success 请求成功与否
  * @apiSuccess {String} msg 错误原因

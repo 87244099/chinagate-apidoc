@@ -2392,6 +2392,19 @@ define({ "api": [
     "name": "getMemberInfo",
     "group": "登录注册",
     "description": "<p>获取平台会员信息</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "cmd",
+            "description": "<p>getMemberInfo</p>"
+          }
+        ]
+      }
+    },
     "success": {
       "fields": {
         "Success 200": [
