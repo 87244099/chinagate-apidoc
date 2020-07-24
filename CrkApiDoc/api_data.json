@@ -1631,7 +1631,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n  \"rt\": 0,\n  \"success\": true,\n  \"msg\": \"请求成功\",\n  \"data\": {\n    companyList: [\n      {\n        id:111,\n        name:\"名片名称\",\n        imgSrc:\"https://staticDomain.com/image/aaa.jpg\",\n      },\n      ...\n    ],\n    totalSize: 100//总共收藏了多少名片\n  }\n}",
+          "content": "HTTP/1.1 200 OK\n{\n  \"rt\": 0,\n  \"success\": true,\n  \"msg\": \"请求成功\",\n  \"data\": {\n    companyList: [\n      {\n        id:111,\n        name:\"名片名称\",\n        imgSrc:\"https://staticDomain.com/image/aaa.jpg\",\n        companyId:666,//如果是员工，输出所属企业的信息\n\n      },\n      ...\n    ],\n    totalSize: 100//总共收藏了多少名片\n  }\n}",
           "type": "json"
         }
       ]
@@ -1663,6 +1663,13 @@
             "optional": false,
             "field": "id",
             "description": "<p>员工id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "companyId",
+            "description": "<p>企业id</p>"
           }
         ]
       }
@@ -2381,6 +2388,51 @@
   {
     "type": "get",
     "url": "/logAction/action",
+    "title": "getMemberInfo",
+    "name": "getMemberInfo",
+    "group": "登录注册",
+    "description": "<p>获取平台会员信息</p>",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "success",
+            "description": "<p>请求成功与否</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>错误原因</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "rt",
+            "description": "<p>服务器内部错误码</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n  \"rt\": 0,\n  \"success\": true,\n  \"msg\": \"获取成功\",\n  \"data\":{\n    memberInfo: {\n      id:11,//会员id\n      name:\"名称\",\n      wxAcct: \"微信号\",\n      companyId:111,//所属企业id\n      staffId:666,//所属企业员工id\n    }\n  }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "myapp/login.js",
+    "groupTitle": "登录注册"
+  },
+  {
+    "type": "get",
+    "url": "/logAction/action",
     "title": "login",
     "name": "login",
     "group": "登录注册",
@@ -2511,71 +2563,6 @@
   {
     "type": "get",
     "url": "/logAction/action",
-    "title": "memberUpToVipB",
-    "name": "memberUpToVipB",
-    "group": "登录注册",
-    "description": "<p>平台会员升级成某个二级商家vip会员</p>",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "cmd",
-            "description": "<p>memberUpToVipB</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "companyBId",
-            "description": "<p>二级商家的id</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "fields": {
-        "Success 200": [
-          {
-            "group": "Success 200",
-            "type": "Boolean",
-            "optional": false,
-            "field": "success",
-            "description": "<p>请求成功与否</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "msg",
-            "description": "<p>错误原因</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "Number",
-            "optional": false,
-            "field": "rt",
-            "description": "<p>服务器内部错误码</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n  \"rt\": 0,\n  \"success\": true,\n  \"msg\": \"升级成功\"\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "version": "0.0.0",
-    "filename": "myapp/login.js",
-    "groupTitle": "登录注册"
-  },
-  {
-    "type": "get",
-    "url": "/logAction/action",
     "title": "reg",
     "name": "reg",
     "group": "登录注册",
@@ -2596,6 +2583,20 @@
             "optional": false,
             "field": "code",
             "description": "<p>微信小程序内部获取到的jscode码，去微信服务器查询openId,unionId,session_key，然后进行注册校验，详见https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/login.html</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>名称</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "phone",
+            "description": "<p>手机号</p>"
           }
         ]
       }
