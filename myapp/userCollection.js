@@ -167,11 +167,6 @@
  * @apiParam {Number} id 用户id
  * @apiParam {String} name 姓名
  * @apiParam {String} phone 手机号
- * @apiParam {blob} headImg 头像（图片数据，修改图片时会带上这个字段）
- * @apiHeader {String} Content-Type multipart/form-data 
- * @apiHeader {String} Accept application/json 
- * 
- * 
  * @apiParam {String} addrInfo 所在地区，上传参数为地区代码 eg:"{\"provinceCode\":1,\"cityCode\":2,\"countryCode\":3}"（可选）
  * @apiParam {String} wecharAcct 微信号（可选）
  * @apiParam {String} qqAcct qq号（可选）
@@ -218,6 +213,31 @@
  *         id:111,
  *         name:"名称",
  *         //...其他字段
+ *       }
+ *     }
+ */
+
+/**
+ * @api {post} /user/userInfo uploadHeadImg
+ * @apiName uploadHeadImg
+ * @apiDescription 上传个人名片的头像
+ * @apiGroup 名片
+ *
+ * @apiParam {String} cmd uploadHeadImg
+ * @apiParam {String} name headImg(文件在body对应的key值，读取二进制数据)
+ *
+ * @apiSuccess {Boolean} success 请求成功与否
+ * @apiSuccess {String} msg 错误原因
+ * @apiSuccess {Number} rt 服务器内部错误码
+ * @apiSuccess {Object} data 请求数据
+ * @apiSuccessExample {json} Success-Response:
+ *     HTTP/1.1 200 OK
+ *     {
+ *       "rt": 0,
+ *       "success": true,
+ *       "msg": "上传成功",
+ *       "data": {
+ *         headImg: "/Upload/headImg.jpg"//上传成功后文件所在磁盘路径
  *       }
  *     }
  */
