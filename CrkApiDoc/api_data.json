@@ -1645,7 +1645,7 @@
     "url": "/user/userInfo",
     "title": "getInfo4Staff",
     "name": "getInfo4Staff",
-    "description": "<p>获取员工信息</p>",
+    "description": "<p>获取员工名片信息</p>",
     "group": "名片",
     "parameter": {
       "fields": {
@@ -1710,7 +1710,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n  \"rt\": 0,\n  \"success\": true,\n  \"msg\": \"请求成功\",\n  \"data\": {\n    id:111,\n    name:\"名称\",\n    //...其他字段\n  }\n}",
+          "content": "HTTP/1.1 200 OK\n{\n  \"rt\": 0,\n  \"success\": true,\n  \"msg\": \"请求成功\",\n  \"data\": {\n    id:111,\n    name:\"名称\",\n    job: \"主管\",//职位信息\n    phone: \"15816000000\",//联系电话\n    chatInfo:{},//页面有个聊天功能，点了没反应，这块应该需要数据才对\n    \n  }\n}",
           "type": "json"
         }
       ]
@@ -2042,49 +2042,56 @@
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "name",
+            "field": "avatarPhotoFile",
+            "description": "<p>头像图片的文件id(如果为为空或者和原来一样，则代表没有修改过)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "memberName",
             "description": "<p>姓名</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "phone",
-            "description": "<p>手机号</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "addrInfo",
+            "field": "region",
             "description": "<p>所在地区，上传参数为地区代码 eg:&quot;{&quot;provinceCode&quot;:1,&quot;cityCode&quot;:2,&quot;countryCode&quot;:3}&quot;（可选）</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "wecharAcct",
+            "field": "address",
+            "description": "<p>地址（可选）</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "weChat",
             "description": "<p>微信号（可选）</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "qqAcct",
+            "field": "qq",
             "description": "<p>qq号（可选）</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "email",
+            "field": "memberEmail",
             "description": "<p>邮箱（可选）</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "description",
+            "field": "personalIntroduction",
             "description": "<p>简要描述（可选）</p>"
           }
         ]
@@ -2990,8 +2997,29 @@
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "description",
+            "field": "content",
             "description": "<p>维修内容</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "merchantForLevelAID",
+            "description": "<p>一级商家id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "merchantForLevelBID",
+            "description": "<p>二级商家id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "staffID",
+            "description": "<p>员工id</p>"
           }
         ]
       }

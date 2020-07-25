@@ -165,13 +165,14 @@
  *
  * @apiParam {String} cmd setUserCollectInfo
  * @apiParam {Number} id 用户id
- * @apiParam {String} name 姓名
- * @apiParam {String} phone 手机号
- * @apiParam {String} addrInfo 所在地区，上传参数为地区代码 eg:"{\"provinceCode\":1,\"cityCode\":2,\"countryCode\":3}"（可选）
- * @apiParam {String} wecharAcct 微信号（可选）
- * @apiParam {String} qqAcct qq号（可选）
- * @apiParam {String} email 邮箱（可选）
- * @apiParam {String} description 简要描述（可选）
+ * @apiParam {String} avatarPhotoFile 头像图片的文件id(如果为为空或者和原来一样，则代表没有修改过)
+ * @apiParam {String} memberName 姓名
+ * @apiParam {String} region 所在地区，上传参数为地区代码 eg:"{\"provinceCode\":1,\"cityCode\":2,\"countryCode\":3}"（可选）
+ * @apiParam {String} address 地址（可选）
+ * @apiParam {String} weChat 微信号（可选）
+ * @apiParam {String} qq qq号（可选）
+ * @apiParam {String} memberEmail 邮箱（可选）
+ * @apiParam {String} personalIntroduction 简要描述（可选）
  * 
  * @apiSuccess {Boolean} success 请求成功与否
  * @apiSuccess {String} msg 错误原因
@@ -186,13 +187,10 @@
  *     }
  */
 
-
- 
-
-  /**
+/**
  * @api {get} /user/userInfo getInfo4Staff
  * @apiName getInfo4Staff
- * @apiDescription 获取员工信息
+ * @apiDescription 获取员工名片信息
  * @apiGroup 名片
  *
  * @apiParam {String} cmd getInfo4Staff
@@ -212,7 +210,10 @@
  *       "data": {
  *         id:111,
  *         name:"名称",
- *         //...其他字段
+ *         job: "主管",//职位信息
+ *         phone: "15816000000",//联系电话
+ *         chatInfo:{},//页面有个聊天功能，点了没反应，这块应该需要数据才对
+ *         
  *       }
  *     }
  */

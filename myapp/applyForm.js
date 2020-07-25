@@ -55,7 +55,10 @@
  * @apiParam {String} cmd applyService
  * @apiParam {String} name 姓名
  * @apiParam {String} phone 手机号
- * @apiParam {String} description 维修内容
+ * @apiParam {String} content 维修内容
+ * @apiParam {Number} merchantForLevelAID 一级商家id
+ * @apiParam {Number} merchantForLevelBID 二级商家id
+ * @apiParam {Number} staffID 员工id
  *
  * @apiSuccess {Boolean} success 请求成功与否
  * @apiSuccess {String} msg 错误原因
