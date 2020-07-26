@@ -259,7 +259,9 @@
  *
  * @apiParam {String} cmd setProductCollect
  * @apiParam {Number} productId 产品id
- * @apiParam {Number} id 产品id
+ * @apiParam {Number} merchantForLevelAID 一级商家id
+ * @apiParam {Number} merchantForLevelBID 二级商家id
+ * @apiParam {Number} staffID 员工id
  * @apiSuccess {Boolean} success 请求成功与否
  * @apiSuccess {String} msg 错误原因
  * @apiSuccess {Number} rt 服务器内部错误码
