@@ -85,10 +85,11 @@
         "msg": "获取成功",
         "data":{
           memberInfo: {
-            id:11,//会员id
+            id:11,//会员id(这个必须输出，不然有些页面拿不到数据)
             name:"名称",
             wxAcct: "微信号",
             companyId:111,//所属企业id
+            companySubTypeId: 1,//代表一级商家还是二级商家(这个必须输出，不然有些页面拿不到数据)
             staffId:666,//所属企业员工id
           }
         }
