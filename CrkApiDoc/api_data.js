@@ -443,8 +443,22 @@ define({ "api": [
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": "id",
-            "description": "<p>产品id</p>"
+            "field": "merchantForLevelAID",
+            "description": "<p>一级商家id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "merchantForLevelBID",
+            "description": "<p>二级商家id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "staffID",
+            "description": "<p>员工id</p>"
           }
         ]
       }
@@ -1120,8 +1134,15 @@ define({ "api": [
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": "id",
-            "description": "<p>店铺id</p>"
+            "field": "merchantForLevelAID",
+            "description": "<p>一级商家id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "merchantForLevelBID",
+            "description": "<p>二级商家id</p>"
           }
         ]
       }
@@ -1192,8 +1213,15 @@ define({ "api": [
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": "id",
-            "description": "<p>店铺id</p>"
+            "field": "merchantForLevelAID",
+            "description": "<p>一级商家id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "merchantForLevelBID",
+            "description": "<p>二级商家id</p>"
           }
         ]
       }
@@ -1443,7 +1471,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n  \"rt\": 0,\n  \"success\": true,\n  \"msg\": \"请求成功\",\n  \"data\": {\n    sysPhone: 15800000000\n  },\n}",
+          "content": "HTTP/1.1 200 OK\n{\n  \"rt\": 0,\n  \"success\": true,\n  \"msg\": \"请求成功\",\n  \"data\": {\n    sysPhone: 15800000000,\n    carouselList: [\n      {\n        imgSrc: \"https://staticDomain.com/image/aaaa.jpg\"\n      },\n      ...\n    ],\n    titleData: {\n      \"platformIndex\": \"\",//平台首页\n      \"tradeNews\": \"\",//行业资讯\n      \"recentShop\": \"\",//附近商家\n      \"reg\": \"\",//注册\n      \"login\": \"\",//登录\n      \"suggest\": \"\",//投诉建议\n      \"repair\": \"\",//我要维修\n      \"buy\": \"\",//我要购买\n      \"cardCollect\": \"\",//名片收藏\n      \"productCollect\": \"\",//产品收藏\n      \"shopCollect\": \"\",//店铺收藏\n      \"myCollect\": \"\",//我的收藏\n    }\n  },\n}",
           "type": "json"
         }
       ]
@@ -2436,6 +2464,64 @@ define({ "api": [
     "version": "0.0.0",
     "filename": "myapp/article.js",
     "groupTitle": "文章"
+  },
+  {
+    "type": "get",
+    "url": "/ajax/Test/DeleteMyMember",
+    "title": "",
+    "group": "登录注册",
+    "description": "<p>清除已经注册会员（测试使用）</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "companyAId",
+            "description": "<p>一级商家的id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "success",
+            "description": "<p>请求成功与否</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>错误原因</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "rt",
+            "description": "<p>服务器内部错误码</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n  \"rt\": 0,\n  \"success\": true,\n  \"msg\": \"清除成功\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "myapp/login.js",
+    "groupTitle": "登录注册",
+    "name": "GetAjaxTestDeletemymember"
   },
   {
     "type": "get",

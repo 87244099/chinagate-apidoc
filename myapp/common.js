@@ -131,6 +131,20 @@
             },
             ...
           ],
+          titleData: {
+            "platformIndex": "",//平台首页
+            "tradeNews": "",//行业资讯
+            "recentShop": "",//附近商家
+            "reg": "",//注册
+            "login": "",//登录
+            "suggest": "",//投诉建议
+            "repair": "",//我要维修
+            "buy": "",//我要购买
+            "cardCollect": "",//名片收藏
+            "productCollect": "",//产品收藏
+            "shopCollect": "",//店铺收藏
+            "myCollect": "",//我的收藏
+          }
         },
       }
  */

@@ -226,7 +226,8 @@
  * @apiGroup 企业
  *
  * @apiParam {String} cmd setCompanyCollectCancel
- * @apiParam {Number} id 店铺id
+ * @apiParam {Number} merchantForLevelAID 一级商家id
+ * @apiParam {Number} merchantForLevelBID 二级商家id
  * @apiSuccess {Boolean} success 请求成功与否
  * @apiSuccess {String} msg 错误原因
  * @apiSuccess {Number} rt 服务器内部错误码
@@ -247,7 +248,8 @@
  * @apiGroup 企业
  *
  * @apiParam {String} cmd setCompanyCollect
- * @apiParam {Number} id 店铺id
+ * @apiParam {Number} merchantForLevelAID 一级商家id
+ * @apiParam {Number} merchantForLevelBID 二级商家id
  * @apiSuccess {Boolean} success 请求成功与否
  * @apiSuccess {String} msg 错误原因
  * @apiSuccess {Number} rt 服务器内部错误码
