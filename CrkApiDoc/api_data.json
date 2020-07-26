@@ -2572,7 +2572,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n  \"rt\": 0,\n  \"success\": true,\n  \"msg\": \"获取成功\",\n  \"data\":{\n    memberInfo: {\n      id:11,//会员id\n      name:\"名称\",\n      wxAcct: \"微信号\",\n      companyId:111,//所属企业id\n      staffId:666,//所属企业员工id\n    }\n  }\n}",
+          "content": "HTTP/1.1 200 OK\n{\n  \"rt\": 0,\n  \"success\": true,\n  \"msg\": \"获取成功\",\n  \"data\":{\n    memberInfo: {\n      id:11,//会员id(这个必须输出，不然有些页面拿不到数据)\n      name:\"名称\",\n      wxAcct: \"微信号\",\n      companyId:111,//所属企业id\n      companySubTypeId: 1,//代表一级商家还是二级商家(这个必须输出，不然有些页面拿不到数据)\n      staffId:666,//所属企业员工id\n    }\n  }\n}",
           "type": "json"
         }
       ]
