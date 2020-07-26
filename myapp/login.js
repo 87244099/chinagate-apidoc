@@ -90,6 +90,7 @@
             wxAcct: "微信号",
             companyId:111,//所属企业id
             companySubTypeId: 1,//代表一级商家还是二级商家(这个必须输出，不然有些页面拿不到数据)
+            subTypeId:1,//是普通会员还是某个企业的员工
             staffId:666,//所属企业员工id
           }
         }
