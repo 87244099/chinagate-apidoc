@@ -2270,8 +2270,8 @@ define({ "api": [
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "name",
-            "description": "<p>headImg(文件在body对应的key值，读取二进制数据)</p>"
+            "field": "avatarPhotoFile",
+            "description": "<p>(文件在body对应的key值，读取二进制数据)</p>"
           }
         ]
       }

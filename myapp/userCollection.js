@@ -225,7 +225,7 @@
  * @apiGroup 名片
  *
  * @apiParam {String} cmd uploadHeadImg
- * @apiParam {String} name headImg(文件在body对应的key值，读取二进制数据)
+ * @apiParam {String} avatarPhotoFile (文件在body对应的key值，读取二进制数据)
  *
  * @apiSuccess {Boolean} success 请求成功与否
  * @apiSuccess {String} msg 错误原因
