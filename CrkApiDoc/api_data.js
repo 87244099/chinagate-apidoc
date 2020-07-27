@@ -1471,7 +1471,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n  \"rt\": 0,\n  \"success\": true,\n  \"msg\": \"请求成功\",\n  \"data\": {\n    sysPhone: 15800000000,\n    carouselList: [\n      {\n        imgSrc: \"https://staticDomain.com/image/aaaa.jpg\"\n      },\n      ...\n    ],\n    titleData: {\n      \"platformIndex\": \"\",//平台首页\n      \"tradeNews\": \"\",//行业资讯\n      \"recentShop\": \"\",//附近商家\n      \"reg\": \"\",//注册\n      \"login\": \"\",//登录\n      \"suggest\": \"\",//投诉建议\n      \"repair\": \"\",//我要维修\n      \"buy\": \"\",//我要购买\n      \"cardCollect\": \"\",//名片收藏\n      \"productCollect\": \"\",//产品收藏\n      \"shopCollect\": \"\",//店铺收藏\n      \"myCollect\": \"\",//我的收藏\n    }\n  },\n}",
+          "content": "HTTP/1.1 200 OK\n{\n  \"rt\": 0,\n  \"success\": true,\n  \"msg\": \"请求成功\",\n  \"data\": {\n    hotline: \"15800000000\",\n    carouselList: [\n      {\n        imgSrc: \"https://staticDomain.com/image/aaaa.jpg\"\n      },\n      ...\n    ],\n    titleData: {\n      \"platformIndex\": \"\",//平台首页\n      \"tradeNews\": \"\",//行业资讯\n      \"recentShop\": \"\",//附近商家\n      \"reg\": \"\",//注册\n      \"login\": \"\",//登录\n      \"suggest\": \"\",//投诉建议\n      \"repair\": \"\",//我要维修\n      \"buy\": \"\",//我要购买\n      \"cardCollect\": \"\",//名片收藏\n      \"productCollect\": \"\",//产品收藏\n      \"shopCollect\": \"\",//店铺收藏\n      \"myCollect\": \"\",//我的收藏\n    }\n  },\n}",
           "type": "json"
         }
       ]
@@ -2539,6 +2539,64 @@ define({ "api": [
             "optional": false,
             "field": "cmd",
             "description": "<p>getMemberInfo</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "success",
+            "description": "<p>请求成功与否</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>错误原因</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "rt",
+            "description": "<p>服务器内部错误码</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n  \"rt\": 0,\n  \"success\": true,\n  \"msg\": \"获取成功\",\n  \"data\":{\n    memberInfo: {\n      id:11,//会员id(这个必须输出，不然有些页面拿不到数据)\n      name:\"名称\",\n      wxAcct: \"微信号\",\n      companyId:111,//所属企业id\n      companySubTypeId: 1,//代表一级商家还是二级商家(这个必须输出，不然有些页面拿不到数据)\n      subTypeId:1,//是普通会员还是某个企业的员工\n      staffId:666,//所属企业员工id\n    }\n  }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "myapp/login.js",
+    "groupTitle": "登录注册"
+  },
+  {
+    "type": "get",
+    "url": "/logAction/action",
+    "title": "getMemberInfoById",
+    "name": "getMemberInfoById",
+    "group": "登录注册",
+    "description": "<p>根据传入的会员id获取会员信息</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "cmd",
+            "description": "<p>getMemberInfoById</p>"
           }
         ]
       }
