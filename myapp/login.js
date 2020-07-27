@@ -97,6 +97,38 @@
       }
  */
 
+ /**
+ * @api {get} /logAction/action getMemberInfoById
+ * @apiName getMemberInfoById
+ * @apiGroup 登录注册
+ * @apiDescription 根据传入的会员id获取会员信息
+ * 
+ * @apiParam {String} cmd getMemberInfoById
+ * @apiParam {Number} cmd id
+ *
+ * @apiSuccess {Boolean} success 请求成功与否
+ * @apiSuccess {String} msg 错误原因
+ * @apiSuccess {Number} rt 服务器内部错误码
+ * @apiSuccessExample {json} Success-Response:
+      HTTP/1.1 200 OK
+      {
+        "rt": 0,
+        "success": true,
+        "msg": "获取成功",
+        "data":{
+          memberInfo: {
+            id:11,//会员id(这个必须输出，不然有些页面拿不到数据)
+            name:"名称",
+            wxAcct: "微信号",
+            companyId:111,//所属企业id
+            companySubTypeId: 1,//代表一级商家还是二级商家(这个必须输出，不然有些页面拿不到数据)
+            subTypeId:1,//是普通会员还是某个企业的员工
+            staffId:666,//所属企业员工id
+          }
+        }
+      }
+ */
+
 
  
  /**

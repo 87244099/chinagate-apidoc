@@ -124,7 +124,7 @@
         "success": true,
         "msg": "请求成功",
         "data": {
-          sysPhone: 15800000000,
+          hotline: "15800000000",
           carouselList: [
             {
               imgSrc: "https://staticDomain.com/image/aaaa.jpg"
