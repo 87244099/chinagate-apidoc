@@ -1591,6 +1591,60 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/common/getCommData",
+    "title": "parseWxPhone",
+    "name": "parseWxPhone",
+    "description": "<p>解析微信的加密手机号数据</p>",
+    "group": "公共接口",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "cmd",
+            "description": "<p>parseWxPhone</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "encryptedData",
+            "description": "<p>encryptedData参数</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "iv",
+            "description": "<p>iv参数</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "code",
+            "description": "<p>登录凭证码</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n  \"rt\": 0,\n  \"success\": true,\n  \"msg\": \"请求成功\",\n  \"data\": {\n    phone:\"158000000000\"\n  },\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "myapp/common.js",
+    "groupTitle": "公共接口"
+  },
+  {
+    "type": "get",
     "url": "/user/userCollection",
     "title": "getCollectionList",
     "name": "getCollectionList",

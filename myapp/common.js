@@ -148,3 +148,28 @@
         },
       }
  */
+
+
+
+ /**
+ * @api {get} /common/getCommData parseWxPhone
+ * @apiName parseWxPhone
+ * @apiDescription 解析微信的加密手机号数据
+ * @apiGroup 公共接口
+ *
+ * @apiParam {String} cmd parseWxPhone
+ * @apiParam {String} encryptedData  encryptedData参数
+ * @apiParam {String} iv  iv参数
+ * @apiParam {String} code  登录凭证码
+ * 
+ * @apiSuccessExample {json} Success-Response:
+      HTTP/1.1 200 OK
+      {
+        "rt": 0,
+        "success": true,
+        "msg": "请求成功",
+        "data": {
+          phone:"158000000000"
+        },
+      }
+ */
