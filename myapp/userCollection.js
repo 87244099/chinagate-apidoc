@@ -146,10 +146,16 @@
  *           imgSrc:"https://staticDomain.com/image/aaa.jpg",//用户头像
  *           phone:"13690000000",//用户手机号
  *           wechatAcct:"jser",//用户微信号
+ *           qq:"872440899",//qq号码
+ *           email: "111qq@.com",//邮箱
+ *           intraduce: "介绍的内容。。。。",//个人简介
  *           addrInfo:{
  *             provinceName:"广东省",
  *             cityName:"广州市",
- *             countryName:"天河区"
+ *             countryName:"天河区",
+ *             provinceCode: 1,//省份代码
+ *             cityCode: 2,//城市代码
+ *             countryCode:3,//区域代码
  *           }
  *         }
  *       }

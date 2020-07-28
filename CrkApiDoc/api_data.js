@@ -1864,7 +1864,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n  \"rt\": 0,\n  \"success\": true,\n  \"msg\": \"请求成功\",\n  \"data\": {\n    userInfo: {\n      id:111,//用户id\n      name:\"用户名称\",\n      imgSrc:\"https://staticDomain.com/image/aaa.jpg\",//用户头像\n      phone:\"13690000000\",//用户手机号\n      wechatAcct:\"jser\",//用户微信号\n      addrInfo:{\n        provinceName:\"广东省\",\n        cityName:\"广州市\",\n        countryName:\"天河区\"\n      }\n    }\n  }\n}",
+          "content": "HTTP/1.1 200 OK\n{\n  \"rt\": 0,\n  \"success\": true,\n  \"msg\": \"请求成功\",\n  \"data\": {\n    userInfo: {\n      id:111,//用户id\n      name:\"用户名称\",\n      imgSrc:\"https://staticDomain.com/image/aaa.jpg\",//用户头像\n      phone:\"13690000000\",//用户手机号\n      wechatAcct:\"jser\",//用户微信号\n      qq:\"872440899\",//qq号码\n      email: \"111qq@.com\",//邮箱\n      intraduce: \"介绍的内容。。。。\",//个人简介\n      addrInfo:{\n        provinceName:\"广东省\",\n        cityName:\"广州市\",\n        countryName:\"天河区\",\n        provinceCode: 1,//省份代码\n        cityCode: 2,//城市代码\n        countryCode:3,//区域代码\n      }\n    }\n  }\n}",
           "type": "json"
         }
       ]
