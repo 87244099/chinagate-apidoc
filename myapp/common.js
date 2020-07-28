@@ -152,7 +152,7 @@
 
 
  /**
- * @api {get} /common/getCommData parseWxPhone
+ * @api {post} /common/getCommData parseWxPhone
  * @apiName parseWxPhone
  * @apiDescription 解析微信的加密手机号数据
  * @apiGroup 公共接口
@@ -167,7 +167,7 @@
       {
         "rt": 0,
         "success": true,
-        "msg": "请求成功",
+        "msg": "获取成功",
         "data": {
           phone:"158000000000"
         },

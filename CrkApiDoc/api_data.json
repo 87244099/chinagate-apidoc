@@ -1590,7 +1590,7 @@
     "groupTitle": "公共接口"
   },
   {
-    "type": "get",
+    "type": "post",
     "url": "/common/getCommData",
     "title": "parseWxPhone",
     "name": "parseWxPhone",
@@ -1634,7 +1634,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n  \"rt\": 0,\n  \"success\": true,\n  \"msg\": \"请求成功\",\n  \"data\": {\n    phone:\"158000000000\"\n  },\n}",
+          "content": "HTTP/1.1 200 OK\n{\n  \"rt\": 0,\n  \"success\": true,\n  \"msg\": \"获取成功\",\n  \"data\": {\n    phone:\"158000000000\"\n  },\n}",
           "type": "json"
         }
       ]
