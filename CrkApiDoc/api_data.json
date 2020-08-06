@@ -1590,6 +1590,67 @@
     "groupTitle": "公共接口"
   },
   {
+    "type": "get",
+    "url": "/common/getCommData",
+    "title": "getTrace",
+    "name": "getTrace",
+    "description": "<p>获取访问记录</p>",
+    "group": "公共接口",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "cmd",
+            "description": "<p>getTrace</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "typeID",
+            "description": "<p>页面类目，1.一级商家  2.二级商家 3.员工名片 4.产品详情 暂定这几个页面</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "merchantForLevelAID",
+            "description": "<p>一级商家ID</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "merchantForLevelBID",
+            "description": "<p>二级商家ID</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "staffID",
+            "description": "<p>员工ID</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "  HTTP/1.1 200 OK\n{\n  rt:0,\n  msg: \"\",\n  data:{\n    imgList:[\n      \"https://staticDomain/image/aaaa.jpg\",\n      \"https://staticDomain/image/bbb.jpg\"\n    ],//最多10张，且不应该包含当前登录会员的图片\n    totalSize: 1000//多少个人访问过\n  }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "myapp/common.js",
+    "groupTitle": "公共接口"
+  },
+  {
     "type": "post",
     "url": "/common/getCommData",
     "title": "parseWxPhone",
@@ -1635,6 +1696,67 @@
         {
           "title": "Success-Response:",
           "content": "HTTP/1.1 200 OK\n{\n  \"rt\": 0,\n  \"success\": true,\n  \"msg\": \"获取成功\",\n  \"data\": {\n    phone:\"158000000000\"\n  },\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "myapp/common.js",
+    "groupTitle": "公共接口"
+  },
+  {
+    "type": "post",
+    "url": "/common/getCommData",
+    "title": "reportTrace",
+    "name": "reportTrace",
+    "description": "<p>上报页面的访问记录</p>",
+    "group": "公共接口",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "cmd",
+            "description": "<p>reportTrace</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "typeID",
+            "description": "<p>页面类目，1.一级商家  2.二级商家 3.员工名片 4.产品详情 暂定这几个页面</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "merchantForLevelAID",
+            "description": "<p>一级商家ID</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "merchantForLevelBID",
+            "description": "<p>二级商家ID</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "staffID",
+            "description": "<p>员工ID</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK",
           "type": "json"
         }
       ]

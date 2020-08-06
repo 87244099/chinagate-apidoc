@@ -173,3 +173,47 @@
         },
       }
  */
+
+ /**
+ * @api {post} /common/getCommData reportTrace
+ * @apiName reportTrace
+ * @apiDescription 上报页面的访问记录
+ * @apiGroup 公共接口
+ *
+ * @apiParam {String} cmd reportTrace
+ * @apiParam {Number} typeID  页面类目，1.一级商家  2.二级商家 3.员工名片 4.产品详情 暂定这几个页面
+ * @apiParam {Number} merchantForLevelAID  一级商家ID
+ * @apiParam {Number} merchantForLevelBID  二级商家ID
+ * @apiParam {Number} staffID  员工ID
+ * 
+ * @apiSuccessExample {json} Success-Response:
+      HTTP/1.1 200 OK
+ */
+
+ /**
+ * @api {get} /common/getCommData getTrace
+ * @apiName getTrace
+ * @apiDescription 获取访问记录
+ * @apiGroup 公共接口
+ *
+ * @apiParam {String} cmd getTrace
+ * @apiParam {Number} typeID  页面类目，1.一级商家  2.二级商家 3.员工名片 4.产品详情 暂定这几个页面
+ * @apiParam {Number} merchantForLevelAID  一级商家ID
+ * @apiParam {Number} merchantForLevelBID  二级商家ID
+ * @apiParam {Number} staffID  员工ID
+ * 
+ * @apiSuccessExample {json} Success-Response:
+      HTTP/1.1 200 OK
+    {
+      rt:0,
+      msg: "",
+      data:{
+        imgList:[
+          "https://staticDomain/image/aaaa.jpg",
+          "https://staticDomain/image/bbb.jpg"
+        ],//最多10张，且不应该包含当前登录会员的图片
+        totalSize: 1000//多少个人访问过
+      }
+    }
+ */
+
