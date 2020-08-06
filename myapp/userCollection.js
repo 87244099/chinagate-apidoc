@@ -141,18 +141,20 @@
  *       "msg": "请求成功",
  *       "data": {
  *         userInfo: {
- *           id:111,//用户id
- *           name:"用户名称",
- *           imgSrc:"https://staticDomain.com/image/aaa.jpg",//用户头像
- *           phone:"13690000000",//用户手机号
- *           wechatAcct:"jser",//用户微信号
+ *           memberID:111,//用户id
+ *           memberName:"用户名称",
+ *           merchantForLevelAID: 66,//所属企业id,
+ *           avatarPhoto:"https://staticDomain.com/image/aaa.jpg",//用户头像
+ *           memberPhone:"13690000000",//用户手机号
+ *           weChat:"jser",//用户微信号
  *           qq:"872440899",//qq号码
  *           email: "111qq@.com",//邮箱
- *           intraduce: "介绍的内容。。。。",//个人简介
+ *           personalIntroduction: "介绍的内容。。。。",//个人简介
+ *           address: "文本地址信息",
  *           addrInfo:{
- *             provinceName:"广东省",
- *             cityName:"广州市",
- *             countryName:"天河区",
+ *             provinceName:"广东省",//省份中文名称
+ *             cityName:"广州市",//城市中文名称
+ *             countryName:"天河区",//区域中文名称
  *             provinceCode: 1,//省份代码
  *             cityCode: 2,//城市代码
  *             countryCode:3,//区域代码
