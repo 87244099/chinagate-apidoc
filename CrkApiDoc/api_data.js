@@ -3018,7 +3018,7 @@ define({ "api": [
     "groupTitle": "登录注册"
   },
   {
-    "type": "get",
+    "type": "post",
     "url": "/logAction/action",
     "title": "memberUpToStaff",
     "name": "memberUpToStaff",
@@ -3083,7 +3083,7 @@ define({ "api": [
     "groupTitle": "登录注册"
   },
   {
-    "type": "get",
+    "type": "post",
     "url": "/logAction/action",
     "title": "memberUpToVipA",
     "name": "memberUpToVipA",

@@ -44,7 +44,7 @@
  */
 
  /**
- * @api {get} /logAction/action memberUpToVipA
+ * @api {post} /logAction/action memberUpToVipA
  * @apiName memberUpToVipA
  * @apiGroup 登录注册
  * @apiDescription 平台会员升级成某个一级商家vip会员
@@ -65,7 +65,7 @@
  */
 
  /**
- * @api {get} /logAction/action memberUpToStaff
+ * @api {post} /logAction/action memberUpToStaff
  * @apiName memberUpToStaff
  * @apiGroup 登录注册
  * @apiDescription 会员升级成员工
