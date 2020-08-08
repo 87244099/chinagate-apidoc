@@ -64,6 +64,27 @@
       }
  */
 
+ /**
+ * @api {get} /logAction/action memberUpToStaff
+ * @apiName memberUpToStaff
+ * @apiGroup 登录注册
+ * @apiDescription 会员升级成员工
+ *
+ * @apiParam {String} cmd memberUpToStaff
+ * @apiParam {Number} staffID 商家提前生成好的员工ID
+ *
+ * @apiSuccess {Boolean} success 请求成功与否
+ * @apiSuccess {String} msg 错误原因
+ * @apiSuccess {Number} rt 服务器内部错误码
+ * @apiSuccessExample {json} Success-Response:
+      HTTP/1.1 200 OK
+      {
+        "rt": 0,
+        "success": true,
+        "msg": "升级成功"
+      }
+ */
+
 
 
  /**

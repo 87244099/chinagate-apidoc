@@ -63,7 +63,7 @@
  * @apiGroup 企业
  * @apiDescription 获取品牌厂商
  *
- * @apiParam {String} cmd getRecentCompanyList
+ * @apiParam {String} cmd getBrandCompanyList
  *
  * @apiSuccess {Boolean} success 请求成功与否
  * @apiSuccess {String} msg 错误原因
@@ -92,7 +92,7 @@
  * @apiGroup 企业
  * @apiDescription 搜索品牌厂商
  *
- * @apiParam {String} cmd getRecentCompanyList
+ * @apiParam {String} cmd getBrandCompanyListByName
  * @apiParam {String} word 搜索关键词
  *
  * @apiSuccess {Boolean} success 请求成功与否
@@ -377,3 +377,5 @@
  *       }
  *     }
  */
+
+ 

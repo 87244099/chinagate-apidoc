@@ -703,7 +703,7 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "cmd",
-            "description": "<p>getRecentCompanyList</p>"
+            "description": "<p>getBrandCompanyList</p>"
           }
         ]
       }
@@ -761,7 +761,7 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "cmd",
-            "description": "<p>getRecentCompanyList</p>"
+            "description": "<p>getBrandCompanyListByName</p>"
           },
           {
             "group": "Parameter",
@@ -3009,6 +3009,71 @@ define({ "api": [
         {
           "title": "Success-Response:",
           "content": "HTTP/1.1 200 OK\n{\n  \"rt\": 0,\n  \"success\": true,\n  \"msg\": \"登录成功\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "myapp/login.js",
+    "groupTitle": "登录注册"
+  },
+  {
+    "type": "get",
+    "url": "/logAction/action",
+    "title": "memberUpToStaff",
+    "name": "memberUpToStaff",
+    "group": "登录注册",
+    "description": "<p>会员升级成员工</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "cmd",
+            "description": "<p>memberUpToStaff</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "staffID",
+            "description": "<p>商家提前生成好的员工ID</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "success",
+            "description": "<p>请求成功与否</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>错误原因</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "rt",
+            "description": "<p>服务器内部错误码</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n  \"rt\": 0,\n  \"success\": true,\n  \"msg\": \"升级成功\"\n}",
           "type": "json"
         }
       ]
