@@ -3103,8 +3103,8 @@ define({ "api": [
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": "companyAId",
-            "description": "<p>一级商家的id</p>"
+            "field": "vipCustomerInvitationID",
+            "description": "<p>被邀请</p>"
           }
         ]
       }

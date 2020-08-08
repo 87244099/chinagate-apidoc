@@ -50,7 +50,7 @@
  * @apiDescription 平台会员升级成某个一级商家vip会员
  *
  * @apiParam {String} cmd memberUpToVipA
- * @apiParam {Number} companyAId 一级商家的id
+ * @apiParam {Number} vipCustomerInvitationID 被邀请
  *
  * @apiSuccess {Boolean} success 请求成功与否
  * @apiSuccess {String} msg 错误原因
