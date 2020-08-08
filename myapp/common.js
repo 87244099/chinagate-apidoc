@@ -97,7 +97,8 @@
  * @apiGroup 公共接口
  *
  * @apiParam {String} cmd getQrCode
- * @apiParam {String} cmd path  小程序内部路径
+ * @apiParam {String} path  小程序内部路径
+ * @apiParam {String} scene  页面参数
  * 
  * @apiHeader {String} Content-Type image/jpeg
  * @apiHeader {String} Accept bytes

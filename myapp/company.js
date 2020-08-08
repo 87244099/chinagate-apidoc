@@ -57,6 +57,66 @@
  */
 
  
+ /**
+ * @api {get} /company/company getBrandCompanyList
+ * @apiName getBrandCompanyList
+ * @apiGroup 企业
+ * @apiDescription 获取品牌厂商
+ *
+ * @apiParam {String} cmd getRecentCompanyList
+ *
+ * @apiSuccess {Boolean} success 请求成功与否
+ * @apiSuccess {String} msg 错误原因
+ * @apiSuccess {Number} rt 服务器内部错误码
+ * @apiSuccessExample {json} Success-Response:
+      HTTP/1.1 200 OK
+      {
+        "rt": 0,
+        "success": true,
+        "msg": "获取成功",
+        data: {
+          companyList: [
+            {
+              id: 1,
+              name: "company name",
+              imgSrc: "https://staticDomain.com/image/aaaa.jpg"
+            }
+          ]
+        }
+      }
+ */
+
+ /**
+ * @api {get} /company/company getBrandCompanyListByName
+ * @apiName getBrandCompanyListByName
+ * @apiGroup 企业
+ * @apiDescription 搜索品牌厂商
+ *
+ * @apiParam {String} cmd getRecentCompanyList
+ * @apiParam {String} word 搜索关键词
+ *
+ * @apiSuccess {Boolean} success 请求成功与否
+ * @apiSuccess {String} msg 错误原因
+ * @apiSuccess {Number} rt 服务器内部错误码
+ * @apiSuccessExample {json} Success-Response:
+      HTTP/1.1 200 OK
+      {
+        "rt": 0,
+        "success": true,
+        "msg": "获取成功",
+        data: {
+          companyList: [
+            {
+              id: 1,
+              name: "company name",
+              imgSrc: "https://staticDomain.com/image/aaaa.jpg"
+            }
+          ]
+        }
+      }
+ */
+
+ 
  
  /**
  * @api {get} /company/company getCompanyAIndexPageData

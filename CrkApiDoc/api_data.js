@@ -691,6 +691,129 @@ define({ "api": [
   {
     "type": "get",
     "url": "/company/company",
+    "title": "getBrandCompanyList",
+    "name": "getBrandCompanyList",
+    "group": "企业",
+    "description": "<p>获取品牌厂商</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "cmd",
+            "description": "<p>getRecentCompanyList</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "success",
+            "description": "<p>请求成功与否</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>错误原因</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "rt",
+            "description": "<p>服务器内部错误码</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n  \"rt\": 0,\n  \"success\": true,\n  \"msg\": \"获取成功\",\n  data: {\n    companyList: [\n      {\n        id: 1,\n        name: \"company name\",\n        imgSrc: \"https://staticDomain.com/image/aaaa.jpg\"\n      }\n    ]\n  }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "myapp/company.js",
+    "groupTitle": "企业"
+  },
+  {
+    "type": "get",
+    "url": "/company/company",
+    "title": "getBrandCompanyListByName",
+    "name": "getBrandCompanyListByName",
+    "group": "企业",
+    "description": "<p>搜索品牌厂商</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "cmd",
+            "description": "<p>getRecentCompanyList</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "word",
+            "description": "<p>搜索关键词</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "success",
+            "description": "<p>请求成功与否</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>错误原因</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "rt",
+            "description": "<p>服务器内部错误码</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n  \"rt\": 0,\n  \"success\": true,\n  \"msg\": \"获取成功\",\n  data: {\n    companyList: [\n      {\n        id: 1,\n        name: \"company name\",\n        imgSrc: \"https://staticDomain.com/image/aaaa.jpg\"\n      }\n    ]\n  }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "myapp/company.js",
+    "groupTitle": "企业"
+  },
+  {
+    "type": "get",
+    "url": "/company/company",
     "title": "getCompanyAIndexPageData",
     "name": "getCompanyAIndexPageData",
     "group": "企业",
@@ -1561,6 +1684,20 @@ define({ "api": [
             "optional": false,
             "field": "cmd",
             "description": "<p>getQrCode</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "path",
+            "description": "<p>小程序内部路径</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "scene",
+            "description": "<p>页面参数</p>"
           }
         ]
       }
