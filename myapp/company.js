@@ -378,4 +378,56 @@
  *     }
  */
 
+
+  /**
+ * @api {get} /company/companyInfo getInvitationVipPageData
+ * @apiName getInvitationVipPageData
+ * @apiDescription 获取会员邀请页面数据
+ * @apiGroup 企业
+ *
+ * @apiParam {String} cmd getInvitationVipPageData
+ * @apiParam {Number} vipCustomerInvitationID vip的id
+ *
+ * @apiSuccess {Boolean} success 请求成功与否
+ * @apiSuccess {String} msg 错误原因
+ * @apiSuccess {Number} rt 服务器内部错误码
+ * @apiSuccess {Object} data 请求数据
+ * @apiSuccessExample {json} Success-Response:
+ *     HTTP/1.1 200 OK
+ *     {
+ *       "rt": 0,
+ *       "success": true,
+ *       "msg": "请求成功",
+ *       "data": {
+ *         companyInfo: {}//公司实体 
+ *       }
+ *     }
+ */
+
+  /**
+ * @api {get} /company/companyInfo getInvitationStaffPageData
+ * @apiName getInvitationStaffPageData
+ * @apiDescription 获取员工邀请页面数据
+ * @apiGroup 企业
+ *
+ * @apiParam {String} cmd getInvitationStaffPageData
+ * @apiParam {Number} staffID 员工id
+ *
+ * @apiSuccess {Boolean} success 请求成功与否
+ * @apiSuccess {String} msg 错误原因
+ * @apiSuccess {Number} rt 服务器内部错误码
+ * @apiSuccess {Object} data 请求数据
+ * @apiSuccessExample {json} Success-Response:
+ *     HTTP/1.1 200 OK
+ *     {
+ *       "rt": 0,
+ *       "success": true,
+ *       "msg": "请求成功",
+ *       "data": {
+ *         staffInfo: {},//员工实体
+ *         companyInfo: {}//公司实体 
+ *       }
+ *     }
+ */
+
  
