@@ -200,7 +200,7 @@
  */
  
  /**
- * @api {get} /logAction/action loginWithAutoReg 
+ * @api {post} /logAction/action loginWithAutoReg 
  * @apiName loginWithAutoReg
  * @apiGroup 登录注册
  * @apiDescription 自动登录注册：进行登录，如果登录，如果用户不存在则进行注册
