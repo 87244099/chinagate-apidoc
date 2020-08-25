@@ -1,11 +1,13 @@
 
  /**
- * @api {get} /logAction/action login
+ * @api {post} /logAction/action login
  * @apiName login
  * @apiGroup 登录注册
  * @apiDescription 进行微信登录
  *
  * @apiParam {String} cmd login
+ * @apiParam {String} iv 
+ * @apiParam {String} encryptedData 
  * @apiParam {String} code 微信小程序内部获取到的jscode码，去微信服务器查询openId,unionId,session_key，然后进行登录校验，详见https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/login.html
  *
  * @apiSuccess {Boolean} success 请求成功与否
@@ -28,8 +30,10 @@
  *
  * @apiParam {String} cmd reg
  * @apiParam {String} code 微信小程序内部获取到的jscode码，去微信服务器查询openId,unionId,session_key，然后进行注册校验，详见https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/login.html
- * @apiParam {String} name 名称
- * @apiParam {String} phone 手机号
+ * @apiParam {String} nickName 名称
+ * @apiParam {String} avatarPhoto 手机号
+ * @apiParam {String} iv 
+ * @apiParam {String} encryptedData 
  * 
  * @apiSuccess {Boolean} success 请求成功与否
  * @apiSuccess {String} msg 错误原因
@@ -168,5 +172,55 @@
         "rt": 0,
         "success": true,
         "msg": "清除成功"
+      }
+ */
+
+ /**
+ * @api {post} /logAction/action checkUserExist
+ * @apiName checkUserExist
+ * @apiGroup 登录注册
+ * @apiDescription 检查用户是否存在，通过openId查询用户是否已经存在，多个openId对应一个unionId
+ *
+ * @apiParam {String} cmd checkUserExist
+ * @apiParam {String} code 微信小程序内部获取到的jscode码，去微信服务器查询openId,unionId,session_key，然后进行登录校验，详见https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/login.html
+ *
+ * @apiSuccess {Boolean} success 请求成功与否
+ * @apiSuccess {String} msg 错误原因
+ * @apiSuccess {Number} rt 服务器内部错误码
+ * @apiSuccessExample {json} Success-Response:
+      HTTP/1.1 200 OK
+      {
+        "rt": 0,
+        "success": true,//强制为true
+        "data": {
+          exist:true,//存在与否
+        },
+        "msg": "登录成功"
+      }
+ */
+ 
+ /**
+ * @api {get} /logAction/action loginWithAutoReg 
+ * @apiName loginWithAutoReg
+ * @apiGroup 登录注册
+ * @apiDescription 自动登录注册：进行登录，如果登录，如果用户不存在则进行注册
+ *
+ * @apiParam {String} cmd loginWithAutoReg
+ * @apiParam {String} code 微信小程序内部获取到的jscode码，去微信服务器查询openId,unionId,session_key，然后进行注册校验，详见https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/login.html
+ * @apiParam {String} nickName 名称
+ * @apiParam {String} signature signature = sha1( rawData + session_key )
+ * @apiParam {String} avatarPhoto 手机号
+ * @apiParam {String} iv 
+ * @apiParam {String} encryptedData 
+ * 
+ * @apiSuccess {Boolean} success 请求成功与否
+ * @apiSuccess {String} msg 错误原因
+ * @apiSuccess {Number} rt 服务器内部错误码
+ * @apiSuccessExample {json} Success-Response:
+      HTTP/1.1 200 OK
+      {
+        "rt": 0,
+        "success": true,
+        "msg": "注册成功"
       }
  */
