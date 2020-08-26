@@ -3275,13 +3275,6 @@
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "signature",
-            "description": "<p>signature = sha1( rawData + session_key )</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
             "field": "avatarPhoto",
             "description": "<p>微信头像</p>"
           },
