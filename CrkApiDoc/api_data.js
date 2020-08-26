@@ -3241,7 +3241,7 @@ define({ "api": [
     "groupTitle": "登录注册"
   },
   {
-    "type": "get",
+    "type": "post",
     "url": "/logAction/action",
     "title": "loginWithAutoReg",
     "name": "loginWithAutoReg",
@@ -3283,7 +3283,7 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "avatarPhoto",
-            "description": "<p>手机号</p>"
+            "description": "<p>微信头像</p>"
           },
           {
             "group": "Parameter",
