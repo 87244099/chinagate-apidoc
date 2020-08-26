@@ -209,7 +209,7 @@
  * @apiParam {String} code 微信小程序内部获取到的jscode码，去微信服务器查询openId,unionId,session_key，然后进行注册校验，详见https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/login.html
  * @apiParam {String} nickName 名称
  * @apiParam {String} signature signature = sha1( rawData + session_key )
- * @apiParam {String} avatarPhoto 手机号
+ * @apiParam {String} avatarPhoto 微信头像
  * @apiParam {String} iv 
  * @apiParam {String} encryptedData 
  * 
