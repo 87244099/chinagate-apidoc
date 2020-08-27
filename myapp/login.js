@@ -198,6 +198,29 @@
         "msg": "登录成功"
       }
  */
+
+ /**
+ * @api {get} /logAction/action checkLogin
+ * @apiName checkLogin
+ * @apiGroup 登录注册
+ * @apiDescription 检查是否处于登录状态
+ *
+ * @apiParam {String} cmd checkLogin
+ *
+ * @apiSuccess {Boolean} success 请求成功与否
+ * @apiSuccess {String} msg 错误原因
+ * @apiSuccess {Number} rt 服务器内部错误码
+ * @apiSuccessExample {json} Success-Response:
+      HTTP/1.1 200 OK
+      {
+        "rt": 0,
+        "success": true,//强制为true
+        "data": {
+          isLogin:true,//是否已经登录
+        },
+        "msg": "已经登录"
+      }
+ */
  
  /**
  * @api {post} /logAction/action loginWithAutoReg 
