@@ -6,8 +6,6 @@
  * @apiDescription 进行微信登录
  *
  * @apiParam {String} cmd login
- * @apiParam {String} iv 
- * @apiParam {String} encryptedData 
  * @apiParam {String} code 微信小程序内部获取到的jscode码，去微信服务器查询openId,unionId,session_key，然后进行登录校验，详见https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/login.html
  *
  * @apiSuccess {Boolean} success 请求成功与否
@@ -17,7 +15,7 @@
       HTTP/1.1 200 OK
       {
         "rt": 0,
-        "success": true,
+        "success": true,//是否登录成功
         "msg": "登录成功"
       }
  */
