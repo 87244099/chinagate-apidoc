@@ -286,3 +286,23 @@
       }
     }
  */
+
+ /**
+ * @api {get} /common/getCommData getOpenIdByCode 
+ * @apiName getOpenIdByCode
+ * @apiDescription 获取openId
+ * @apiGroup 公共接口
+ *
+ * @apiParam {String} cmd getOpenIdByCode
+ * @apiParam {String} code jscode
+ * 
+ * @apiSuccessExample {json} Success-Response:
+    HTTP/1.1 200 OK
+    {
+      rt:0,
+      msg: "",
+      data:{
+        openId:"xxxxxx"
+      }
+    }
+ */

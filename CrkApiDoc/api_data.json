@@ -1750,6 +1750,46 @@
   {
     "type": "get",
     "url": "/common/getCommData",
+    "title": "getOpenIdByCode",
+    "name": "getOpenIdByCode",
+    "description": "<p>获取openId</p>",
+    "group": "公共接口",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "cmd",
+            "description": "<p>getOpenIdByCode</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "code",
+            "description": "<p>jscode</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n  rt:0,\n  msg: \"\",\n  data:{\n    openId:\"xxxxxx\"\n  }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "myapp/common.js",
+    "groupTitle": "公共接口"
+  },
+  {
+    "type": "get",
+    "url": "/common/getCommData",
     "title": "getProvinceList",
     "name": "getProvinceList",
     "description": "<p>获取省份列表</p>",
