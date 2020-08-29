@@ -1873,6 +1873,39 @@
   {
     "type": "get",
     "url": "/common/getCommData",
+    "title": "getShareRank",
+    "name": "getShareRank",
+    "description": "<p>获取排行榜数据</p>",
+    "group": "公共接口",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "cmd",
+            "description": "<p>getShareRank</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n  rt:0,\n  msg: \"\",\n  data:{\n    rankList: []\n  }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "myapp/common.js",
+    "groupTitle": "公共接口"
+  },
+  {
+    "type": "get",
+    "url": "/common/getCommData",
     "title": "getTrace",
     "name": "getTrace",
     "description": "<p>获取访问记录</p>",

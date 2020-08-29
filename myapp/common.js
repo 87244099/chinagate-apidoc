@@ -267,3 +267,22 @@
       data:{}
     }
  */
+
+ /**
+ * @api {get} /common/getCommData getShareRank 
+ * @apiName getShareRank
+ * @apiDescription 获取排行榜数据
+ * @apiGroup 公共接口
+ *
+ * @apiParam {String} cmd getShareRank
+ * 
+ * @apiSuccessExample {json} Success-Response:
+    HTTP/1.1 200 OK
+    {
+      rt:0,
+      msg: "",
+      data:{
+        rankList: []
+      }
+    }
+ */
