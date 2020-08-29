@@ -1988,6 +1988,81 @@ define({ "api": [
   {
     "type": "post",
     "url": "/common/getCommData",
+    "title": "reportShare",
+    "name": "reportShare",
+    "description": "<p>上报分享记录</p>",
+    "group": "公共接口",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "cmd",
+            "description": "<p>reportShare</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "typeID",
+            "description": "<p>页面类型(1、一级商家。2、二级商家。3、员工名片。4、产品详情。)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "merchantForLevelAID",
+            "description": "<p>一级商家</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "merchantForLevelBID",
+            "description": "<p>二级商家</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "staffID",
+            "description": "<p>员工id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "xcxOpenID",
+            "description": "<p>分享者openid</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "subID",
+            "description": "<p>子id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n  rt:0,\n  msg: \"\",\n  data:{}\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "myapp/common.js",
+    "groupTitle": "公共接口"
+  },
+  {
+    "type": "post",
+    "url": "/common/getCommData",
     "title": "reportTrace",
     "name": "reportTrace",
     "description": "<p>上报页面的访问记录</p>",
@@ -2038,6 +2113,95 @@ define({ "api": [
         {
           "title": "Success-Response:",
           "content": "HTTP/1.1 200 OK",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "myapp/common.js",
+    "groupTitle": "公共接口"
+  },
+  {
+    "type": "post",
+    "url": "/common/getCommData",
+    "title": "reportVisit4Share",
+    "name": "reportVisit4Share",
+    "description": "<p>上报访问记录</p>",
+    "group": "公共接口",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "cmd",
+            "description": "<p>reportVisit4Share</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "sourceTypeID",
+            "description": "<p>页面来源类型：1好友，2群</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "xcxAccessOpenID",
+            "description": "<p>访问者openid</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "xcxOpenID",
+            "description": "<p>分享者openid</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "typeID",
+            "description": "<p>页面类型(1、一级商家。2、二级商家。3、员工名片。4、产品详情。)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "merchantForLevelAID",
+            "description": "<p>一级商家</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "merchantForLevelBID",
+            "description": "<p>二级商家</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "staffID",
+            "description": "<p>员工id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "subID",
+            "description": "<p>子id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n  rt:0,\n  msg: \"\",\n  data:{}\n}",
           "type": "json"
         }
       ]

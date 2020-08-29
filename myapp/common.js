@@ -218,3 +218,52 @@
     }
  */
 
+ /**
+ * @api {post} /common/getCommData reportVisit4Share
+ * @apiName reportVisit4Share
+ * @apiDescription 上报访问记录
+ * @apiGroup 公共接口
+ *
+ * @apiParam {String} cmd reportVisit4Share
+ * 
+ * @apiParam {Number} sourceTypeID  页面来源类型：1好友，2群
+ * @apiParam {Number} xcxAccessOpenID  访问者openid
+ * @apiParam {Number} xcxOpenID  分享者openid
+ * @apiParam {Number} typeID  页面类型(1、一级商家。2、二级商家。3、员工名片。4、产品详情。)
+ * @apiParam {Number} merchantForLevelAID  一级商家
+ * @apiParam {Number} merchantForLevelBID  二级商家
+ * @apiParam {Number} staffID  员工id
+ * @apiParam {Number} subID  子id 
+ * 
+ * @apiSuccessExample {json} Success-Response:
+    HTTP/1.1 200 OK
+    {
+      rt:0,
+      msg: "",
+      data:{}
+    }
+ */
+
+ /**
+ * @api {post} /common/getCommData reportShare 
+ * @apiName reportShare
+ * @apiDescription 上报分享记录
+ * @apiGroup 公共接口
+ *
+ * @apiParam {String} cmd reportShare
+ * 
+ * @apiParam {Number} typeID  页面类型(1、一级商家。2、二级商家。3、员工名片。4、产品详情。)
+ * @apiParam {Number} merchantForLevelAID  一级商家
+ * @apiParam {Number} merchantForLevelBID  二级商家
+ * @apiParam {Number} staffID  员工id
+ * @apiParam {Number} xcxOpenID  分享者openid
+ * @apiParam {Number} subID  子id 
+ * 
+ * @apiSuccessExample {json} Success-Response:
+    HTTP/1.1 200 OK
+    {
+      rt:0,
+      msg: "",
+      data:{}
+    }
+ */
