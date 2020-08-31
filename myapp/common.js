@@ -283,7 +283,10 @@
       rt:0,
       msg: "",
       data:{
-        rankList: []
+        rankList: [],
+        myRank: {
+          // 字段跟rankList里面的实体一致
+        }
       }
     }
  */

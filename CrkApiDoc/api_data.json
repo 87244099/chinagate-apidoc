@@ -1941,7 +1941,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n  rt:0,\n  msg: \"\",\n  data:{\n    rankList: []\n  }\n}",
+          "content": "HTTP/1.1 200 OK\n{\n  rt:0,\n  msg: \"\",\n  data:{\n    rankList: [],\n    myRank: {\n      // 字段跟rankList里面的实体一致\n    }\n  }\n}",
           "type": "json"
         }
       ]
