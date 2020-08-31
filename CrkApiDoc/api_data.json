@@ -2385,13 +2385,6 @@
             "optional": false,
             "field": "id",
             "description": "<p>员工id</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "companyId",
-            "description": "<p>企业id</p>"
           }
         ]
       }

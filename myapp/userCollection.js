@@ -203,7 +203,6 @@
  *
  * @apiParam {String} cmd getInfo4Staff
  * @apiParam {Number} id 员工id
- * @apiParam {Number} companyId 企业id
  *
  * @apiSuccess {Boolean} success 请求成功与否
  * @apiSuccess {String} msg 错误原因
