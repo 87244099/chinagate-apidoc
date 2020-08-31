@@ -1926,6 +1926,13 @@ define({ "api": [
             "optional": false,
             "field": "cmd",
             "description": "<p>getShareRank</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "type",
+            "description": "<p>0：全部排行，1：当月排行</p>"
           }
         ]
       }
