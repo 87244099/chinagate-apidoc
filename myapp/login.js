@@ -201,7 +201,7 @@
  * @apiDescription 检查用户是否存在，通过openId查询用户是否已经存在，多个openId对应一个unionId
  *
  * @apiParam {String} cmd checkUserExist
- * @apiParam {String} code 微信小程序内部获取到的jscode码，去微信服务器查询openId,unionId,session_key，然后进行登录校验，详见https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/login.html
+ * @apiParam {String} openId 
  *
  * @apiSuccess {Boolean} success 请求成功与否
  * @apiSuccess {String} msg 错误原因
