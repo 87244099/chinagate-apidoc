@@ -1926,6 +1926,13 @@ define({ "api": [
             "optional": false,
             "field": "cmd",
             "description": "<p>getShareRank</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "type",
+            "description": "<p>0：全部排行，1：当月排行</p>"
           }
         ]
       }
@@ -1934,7 +1941,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n  rt:0,\n  msg: \"\",\n  data:{\n    rankList: []\n  }\n}",
+          "content": "HTTP/1.1 200 OK\n{\n  rt:0,\n  msg: \"\",\n  data:{\n    rankList: [],\n    myRank: {\n      // 字段跟rankList里面的实体一致\n    }\n  }\n}",
           "type": "json"
         }
       ]
@@ -3472,6 +3479,71 @@ define({ "api": [
             "optional": false,
             "field": "code",
             "description": "<p>微信小程序内部获取到的jscode码，去微信服务器查询openId,unionId,session_key，然后进行登录校验，详见https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/login.html</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "success",
+            "description": "<p>请求成功与否</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>错误原因</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "rt",
+            "description": "<p>服务器内部错误码</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n  \"rt\": 0,\n  \"success\": true,//是否登录成功\n  \"msg\": \"登录成功\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "myapp/login.js",
+    "groupTitle": "登录注册"
+  },
+  {
+    "type": "post",
+    "url": "/logAction/action",
+    "title": "loginByOpenId",
+    "name": "login",
+    "group": "登录注册",
+    "description": "<p>进行微信登录</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "cmd",
+            "description": "<p>loginByOpenId</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "openId",
+            "description": ""
           }
         ]
       }

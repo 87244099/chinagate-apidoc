@@ -21,6 +21,27 @@
  */
 
  /**
+ * @api {post} /logAction/action loginByOpenId
+ * @apiName login
+ * @apiGroup 登录注册
+ * @apiDescription 进行微信登录
+ *
+ * @apiParam {String} cmd loginByOpenId
+ * @apiParam {String} openId 
+ *
+ * @apiSuccess {Boolean} success 请求成功与否
+ * @apiSuccess {String} msg 错误原因
+ * @apiSuccess {Number} rt 服务器内部错误码
+ * @apiSuccessExample {json} Success-Response:
+      HTTP/1.1 200 OK
+      {
+        "rt": 0,
+        "success": true,//是否登录成功
+        "msg": "登录成功"
+      }
+ */
+
+ /**
  * @api {get} /logAction/action reg
  * @apiName reg
  * @apiGroup 登录注册

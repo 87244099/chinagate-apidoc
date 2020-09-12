@@ -275,6 +275,7 @@
  * @apiGroup 公共接口
  *
  * @apiParam {String} cmd getShareRank
+ * @apiParam {Number} type 0：全部排行，1：当月排行
  * 
  * @apiSuccessExample {json} Success-Response:
     HTTP/1.1 200 OK
@@ -282,7 +283,10 @@
       rt:0,
       msg: "",
       data:{
-        rankList: []
+        rankList: [],
+        myRank: {
+          // 字段跟rankList里面的实体一致
+        }
       }
     }
  */
