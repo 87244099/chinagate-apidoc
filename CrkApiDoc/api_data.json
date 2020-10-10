@@ -588,6 +588,92 @@
     "groupTitle": "产品"
   },
   {
+    "type": "get",
+    "url": "/company/companyInfo",
+    "title": "belongVip",
+    "name": "belongVip",
+    "description": "<p>判断是不是属于某个企业的vip</p>",
+    "group": "企业",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "cmd",
+            "description": "<p>belongVip</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "merchantForLevelAID",
+            "description": "<p>一级商家id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "merchantForLevelBID",
+            "description": "<p>二级商家id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "openId",
+            "description": "<p>openId</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "success",
+            "description": "<p>请求成功与否</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>错误原因</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "rt",
+            "description": "<p>服务器内部错误码</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "data",
+            "description": "<p>请求数据</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n  \"rt\": 0,\n  \"success\": true,//恒为true\n  \"msg\": \"请求成功\",\n  \"data\": {\n    isVip: false//是否为vip\n  }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "myapp/company.js",
+    "groupTitle": "企业"
+  },
+  {
     "type": "post",
     "url": "/company/company",
     "title": "createCompany",
@@ -3459,7 +3545,7 @@
   {
     "type": "post",
     "url": "/logAction/action",
-    "title": "login",
+    "title": "loginByOpenId",
     "name": "login",
     "group": "登录注册",
     "description": "<p>进行微信登录</p>",
@@ -3471,14 +3557,14 @@
             "type": "String",
             "optional": false,
             "field": "cmd",
-            "description": "<p>login</p>"
+            "description": "<p>loginByOpenId</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "code",
-            "description": "<p>微信小程序内部获取到的jscode码，去微信服务器查询openId,unionId,session_key，然后进行登录校验，详见https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/login.html</p>"
+            "field": "openId",
+            "description": ""
           }
         ]
       }
@@ -3524,7 +3610,7 @@
   {
     "type": "post",
     "url": "/logAction/action",
-    "title": "loginByOpenId",
+    "title": "login",
     "name": "login",
     "group": "登录注册",
     "description": "<p>进行微信登录</p>",
@@ -3536,14 +3622,14 @@
             "type": "String",
             "optional": false,
             "field": "cmd",
-            "description": "<p>loginByOpenId</p>"
+            "description": "<p>login</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "openId",
-            "description": ""
+            "field": "code",
+            "description": "<p>微信小程序内部获取到的jscode码，去微信服务器查询openId,unionId,session_key，然后进行登录校验，详见https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/login.html</p>"
           }
         ]
       }

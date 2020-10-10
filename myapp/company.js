@@ -431,3 +431,32 @@
  */
 
  
+
+  /**
+ * @api {get} /company/companyInfo belongVip
+ * @apiName belongVip
+ * @apiDescription 判断是不是属于某个企业的vip
+ * @apiGroup 企业
+ *
+ * @apiParam {String} cmd belongVip
+ * @apiParam {Number} merchantForLevelAID 一级商家id
+ * @apiParam {Number} merchantForLevelBID 二级商家id
+ * @apiParam {String} openId openId
+ *
+ * @apiSuccess {Boolean} success 请求成功与否
+ * @apiSuccess {String} msg 错误原因
+ * @apiSuccess {Number} rt 服务器内部错误码
+ * @apiSuccess {Object} data 请求数据
+ * @apiSuccessExample {json} Success-Response:
+ *     HTTP/1.1 200 OK
+ *     {
+ *       "rt": 0,
+ *       "success": true,//恒为true
+ *       "msg": "请求成功",
+ *       "data": {
+ *         isVip: false//是否为vip
+ *       }
+ *     }
+ */
+
+ 
