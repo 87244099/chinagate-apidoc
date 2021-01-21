@@ -3247,9 +3247,68 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/ajax/Test/CancelStaff",
+    "title": "",
+    "name": "CancelStaff",
+    "group": "测试接口",
+    "description": "<p>清除员工（测试使用）</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "companyAId",
+            "description": "<p>一级商家的id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "success",
+            "description": "<p>请求成功与否</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>错误原因</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "rt",
+            "description": "<p>服务器内部错误码</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n  \"rt\": 0,\n  \"success\": true,\n  \"msg\": \"清除成功\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "myapp/test.js",
+    "groupTitle": "测试接口"
+  },
+  {
+    "type": "get",
     "url": "/ajax/Test/DeleteMyMember",
     "title": "",
-    "group": "登录注册",
+    "name": "DeleteMyMember",
+    "group": "测试接口",
     "description": "<p>清除已经注册会员（测试使用）</p>",
     "parameter": {
       "fields": {
@@ -3299,9 +3358,8 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "myapp/login.js",
-    "groupTitle": "登录注册",
-    "name": "GetAjaxTestDeletemymember"
+    "filename": "myapp/test.js",
+    "groupTitle": "测试接口"
   },
   {
     "type": "get",
@@ -3545,7 +3603,7 @@ define({ "api": [
   {
     "type": "post",
     "url": "/logAction/action",
-    "title": "loginByOpenId",
+    "title": "login",
     "name": "login",
     "group": "登录注册",
     "description": "<p>进行微信登录</p>",
@@ -3557,14 +3615,14 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "cmd",
-            "description": "<p>loginByOpenId</p>"
+            "description": "<p>login</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "openId",
-            "description": ""
+            "field": "code",
+            "description": "<p>微信小程序内部获取到的jscode码，去微信服务器查询openId,unionId,session_key，然后进行登录校验，详见https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/login.html</p>"
           }
         ]
       }
@@ -3610,7 +3668,7 @@ define({ "api": [
   {
     "type": "post",
     "url": "/logAction/action",
-    "title": "login",
+    "title": "loginByOpenId",
     "name": "login",
     "group": "登录注册",
     "description": "<p>进行微信登录</p>",
@@ -3622,14 +3680,14 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "cmd",
-            "description": "<p>login</p>"
+            "description": "<p>loginByOpenId</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "code",
-            "description": "<p>微信小程序内部获取到的jscode码，去微信服务器查询openId,unionId,session_key，然后进行登录校验，详见https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/login.html</p>"
+            "field": "openId",
+            "description": ""
           }
         ]
       }
